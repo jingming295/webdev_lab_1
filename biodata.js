@@ -19,9 +19,11 @@ class Biodata
         const tableWrapper = document.createElement('div');
         const table = document.createElement('table');
 
+        table.style.fontFamily =  'Arial, sans-serif'
+
         const rows = [];
 
-        for (let i = 1; i <= 17; i++)
+        for (let i = 1; i <= 19; i++)
         {
             const tr = document.createElement('tr');
             rows.push(tr);
@@ -37,6 +39,10 @@ class Biodata
         const personalInterestTitle = document.createElement('td');
         const planTitle = document.createElement('td');
         const dateOfBirthTitle = document.createElement('td');
+        const hobbytitle = document.createElement('td')
+        const campusLifeTitle = document.createElement('td')
+
+
         const name = document.createElement('td');
         const photo = document.createElement('td');
         const birthDay = document.createElement('td');
@@ -62,6 +68,9 @@ class Biodata
         const socialmediaLink = document.createElement('a');
         const website = document.createElement('td');
         const websiteLink = document.createElement('a');
+        const hobby = document.createElement('td')
+        const cplife = document.createElement('td')
+
 
         wrapper.style.display = 'flex';
         wrapper.style.flexDirection = 'row';
@@ -75,6 +84,7 @@ class Biodata
         table.style.borderCollapse = 'collapse';
         table.style.width = '100%';
         table.style.opacity = 0;
+
         nameTitle.innerHTML = 'Name';
         nameTitle.colSpan = 1;
         dateOfBirthTitle.innerHTML = 'Date Of Birth';
@@ -89,6 +99,10 @@ class Biodata
         personalInterestTitle.innerHTML = 'Personal Interest';
         personalInterest.colSpan = 2;
         planTitle.innerHTML = 'Future plan in 2024';
+
+        hobbytitle.innerHTML = 'Hobby'
+        campusLifeTitle.innerHTML = 'Campus Life'
+
         name.innerHTML = 'Goh Jing Ming';
         photo.colSpan = 1;
         const photoImg = document.createElement('img');
@@ -120,7 +134,12 @@ class Biodata
         district.innerHTML = 'Tangkak';
         state.innerHTML = 'Johor';
 
+        hobby.innerHTML='Play basket ball'
+        hobby.colSpan = '2'
 
+        cplife.innerHTML = 'I have many friend here, they are all friendly'
+        cplife.colSpan = '2'
+        
         contact_mp.innerHTML = 'Mobile Phone';
         contact_socialmedia.innerHTML = 'Social Media';
         contact_website.innerHTML = 'Website';
@@ -163,7 +182,9 @@ class Biodata
             [courseTitle, coursenIns],
             [programmeSkillsTitle, programmeSkills],
             [personalInterestTitle, personalInterest],
-            [planTitle, plan]
+            [planTitle, plan],
+            [hobbytitle, hobby],
+            [campusLifeTitle, cplife]
         ];
 
         for (let i = 0; i < elements.length; i++)
